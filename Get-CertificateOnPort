@@ -1,10 +1,8 @@
 <#
-Tony Unger
-
-example code
-https://gist.github.com/jstangroome/5945820
+Function built on https://gist.github.com/jstangroome/5945820
 
 $DC = get-adcomputer -filter * -searchbase "ou=domain controllers,dc=microsoft,dc=com" | select -expand name
+Get-CertificateOnPort -servers $dc -port 636
 #>
 
 function Get-CertificateOnPort
